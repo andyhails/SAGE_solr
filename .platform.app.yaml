@@ -1,0 +1,16 @@
+name: institutions
+type: php:7.0
+build:
+    flavor: composer
+disk: 2048
+relationships:
+    solr: "solr:solr"
+web:
+    locations:
+        "/":
+            root: "app"
+            passthru: "/web/index.php"
+            index:
+                - index.php
+            allow: true
+
